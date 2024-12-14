@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5C0EE10-A1B5-4B69-A4E1-7F59A5DF7C97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ExamApplication</RootNamespace>
+    <AssemblyName>ExamApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Core.System.Configuration.Install.1.1.0\lib\netstandard2.0\System.Configuration.Install.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.EventLog.8.0.0\lib\net462\System.Diagnostics.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.PerformanceCounter.8.0.0\lib\net462\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_Question.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Question.Designer.cs">
+      <DependentUpon>Add_Question.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Login.Designer.cs">
+      <DependentUpon>Admin_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insertclass.cs" />
+    <Compile Include="Endpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Endpage.Designer.cs">
+      <DependentUpon>Endpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mainpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainpage.Designer.cs">
+      <DependentUpon>Mainpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Questions.cs" />
+    <Compile Include="QuizApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuizApp.Designer.cs">
+      <DependentUpon>QuizApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="quizAppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quizAppDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quizAppDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quizAppDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="return_class.cs" />
+    <Compile Include="setexam.cs" />
+    <Compile Include="setexams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setexams.Designer.cs">
+      <DependentUpon>setexams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Studentlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Studentlogin.Designer.cs">
+      <DependentUpon>Studentlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewclass.cs" />
+    <EmbeddedResource Include="Add_Question.resx">
+      <DependentUpon>Add_Question.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Login.resx">
+      <DependentUpon>Admin_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Endpage.resx">
+      <DependentUpon>Endpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainpage.resx">
+      <DependentUpon>Mainpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuizApp.resx">
+      <DependentUpon>QuizApp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setexams.resx">
+      <DependentUpon>setexams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Studentlogin.resx">
+      <DependentUpon>Studentlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="quizApp.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="quizApp_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>quizApp.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\us.png" />
+    <None Include="Resources\student1.png" />
+    <None Include="Resources\boy1.jpg" />
+    <None Include="Resources\ma.jpg" />
+    <None Include="Resources\m.jpg" />
+    <None Include="Resources\main.jpg" />
+    <None Include="Resources\congrat.jpg" />
+    <None Include="Resources\download %287%29.png" />
+    <None Include="Resources\download %288%29.png" />
+    <None Include="Resources\download %285%29.png" />
+    <None Include="Resources\download %286%29.png" />
+    <None Include="Resources\previous1.jpg" />
+    <None Include="Resources\previous.jpg" />
+    <None Include="Resources\next.jpg" />
+    <None Include="Resources\download %284%29.png" />
+    <None Include="Resources\quizs.jpg" />
+    <None Include="Resources\watchs.png" />
+    <None Include="Resources\Screenshot 2024-09-03 0037451.png" />
+    <None Include="Resources\Screenshot 2024-09-03 003745.png" />
+    <None Include="Resources\test1.jpg" />
+    <None Include="Resources\faq.jpg" />
+    <None Include="Resources\rty-removebg-preview1.png" />
+    <None Include="Resources\addQuestion.jpeg" />
+    <None Include="Resources\ex1.jpg" />
+    <None Include="Resources\addexam.jpg" />
+    <None Include="Resources\rty-removebg-preview.png" />
+    <None Include="Resources\rty.jpg" />
+    <None Include="Resources\qu.jpg" />
+    <None Include="Resources\ex.jpg" />
+    <None Include="Resources\boy.jpg" />
+    <None Include="Resources\admin.jpg" />
+    <None Include="Resources\register.jpg" />
+    <None Include="quizAppDataSet1.xsc">
+      <DependentUpon>quizAppDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="quizAppDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quizAppDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quizAppDataSet1.xss">
+      <DependentUpon>quizAppDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\download %283%29.png" />
+    <None Include="Resources\download %282%291.png" />
+    <None Include="Resources\download %282%29.png" />
+    <None Include="Resources\download %281%29.png" />
+    <None Include="Resources\ribben.png" />
+    <None Include="Resources\ooo.png" />
+    <None Include="Resources\gh.jpg" />
+    <None Include="Resources\k.jpg" />
+    <None Include="Resources\on.png" />
+    <None Include="Resources\hl.jpg" />
+    <None Include="Resources\test.jpg" />
+    <None Include="Resources\op.jpg" />
+    <None Include="Resources\q.jpg" />
+    <None Include="Resources\quiz.jpg" />
+    <None Include="quizAppDataSet.xsc">
+      <DependentUpon>quizAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="quizAppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quizAppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quizAppDataSet.xss">
+      <DependentUpon>quizAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\download1.png" />
+    <None Include="Resources\h1.jpg" />
+    <None Include="Resources\h.jpg" />
+    <None Include="Resources\s.jpg" />
+    <None Include="Resources\te1.jpg" />
+    <None Include="Resources\peoples.jpg" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\t.jpg" />
+    <None Include="Resources\student.png" />
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
